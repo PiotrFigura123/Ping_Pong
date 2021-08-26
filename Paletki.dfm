@@ -2,7 +2,8 @@ object Form1: TForm1
   Left = 231
   Top = 120
   AlphaBlend = True
-  AutoScroll = False
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Form1'
   ClientHeight = 567
   ClientWidth = 440
