@@ -1,10 +1,11 @@
 object Form1: TForm1
-  Left = 192
-  Top = 124
-  Width = 329
-  Height = 480
+  Left = 231
+  Top = 120
   AlphaBlend = True
+  AutoScroll = False
   Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 440
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,6 +13,8 @@ object Form1: TForm1
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   OnKeyUp = FormKeyUp
   PixelsPerInch = 96
@@ -19,14 +22,14 @@ object Form1: TForm1
   object tlo: TShape
     Left = 0
     Top = 0
-    Width = 313
-    Height = 393
-    Align = alTop
+    Width = 440
+    Height = 567
+    Align = alClient
     Brush.Color = clMoneyGreen
   end
   object pilka: TImage
-    Left = 264
-    Top = 56
+    Left = 208
+    Top = 248
     Width = 33
     Height = 33
     Picture.Data = {
@@ -53,8 +56,8 @@ object Form1: TForm1
     Transparent = True
   end
   object pal1: TImage
-    Left = 184
-    Top = 320
+    Left = 160
+    Top = 552
     Width = 120
     Height = 9
     AutoSize = True
@@ -82,8 +85,8 @@ object Form1: TForm1
       000000000000000000000000000000000000000000000000000000000000}
   end
   object pal2: TImage
-    Left = 160
-    Top = 40
+    Left = 168
+    Top = 16
     Width = 120
     Height = 9
     AutoSize = True
@@ -111,9 +114,9 @@ object Form1: TForm1
       000000000000000000000000000000000000000000000000000000000000}
   end
   object Label1: TLabel
-    Left = 112
-    Top = 352
-    Width = 81
+    Left = 128
+    Top = 296
+    Width = 6
     Height = 29
     Color = clMoneyGreen
     Font.Charset = DEFAULT_CHARSET
@@ -125,9 +128,9 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 110
-    Top = 0
-    Width = 82
+    Left = 126
+    Top = 248
+    Width = 6
     Height = 29
     Color = clMoneyGreen
     Font.Charset = DEFAULT_CHARSET
@@ -138,8 +141,95 @@ object Form1: TForm1
     ParentColor = False
     ParentFont = False
   end
+  object Shape1: TShape
+    Left = 0
+    Top = 281
+    Width = 441
+    Height = 7
+  end
+  object Label3: TLabel
+    Left = 152
+    Top = 136
+    Width = 137
+    Height = 37
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -32
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Visible = False
+  end
+  object Label4: TLabel
+    Left = 144
+    Top = 416
+    Width = 145
+    Height = 37
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -32
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Visible = False
+  end
+  object Button1: TButton
+    Left = 160
+    Top = 240
+    Width = 145
+    Height = 41
+    Caption = 'START'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -32
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 160
+    Top = 288
+    Width = 145
+    Height = 41
+    Caption = 'OD NOWA'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    OnClick = Button2Click
+  end
+  object MediaPlayer1: TMediaPlayer
+    Left = 96
+    Top = 352
+    Width = 253
+    Height = 30
+    Visible = False
+    TabOrder = 2
+  end
+  object MediaPlayer2: TMediaPlayer
+    Left = 96
+    Top = 384
+    Width = 253
+    Height = 30
+    Visible = False
+    TabOrder = 3
+  end
+  object MediaPlayer3: TMediaPlayer
+    Left = 96
+    Top = 456
+    Width = 253
+    Height = 30
+    Visible = False
+    TabOrder = 4
+  end
   object Timer_pilka: TTimer
-    Interval = 50
+    Enabled = False
+    Interval = 10
     OnTimer = Timer_pilkaTimer
     Left = 48
     Top = 56
