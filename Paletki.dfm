@@ -151,7 +151,7 @@ object Form1: TForm1
   object Label3: TLabel
     Left = 152
     Top = 136
-    Width = 137
+    Width = 9
     Height = 37
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -164,7 +164,7 @@ object Form1: TForm1
   object Label4: TLabel
     Left = 144
     Top = 416
-    Width = 145
+    Width = 9
     Height = 37
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
