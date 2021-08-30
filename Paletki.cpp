@@ -43,7 +43,8 @@ Label2->Caption = pkt_player2;
    Button1->Visible=true;
    Button2->Visible=true;
    kierunek=1;
-   MediaPlayer2->Play();
+     PlaySound(MAKEINTRESOURCE(200), HInstance, SND_RESOURCE | SND_ASYNC);
+
  }
  else if(pilka->Top>=pal1->Top+pal1->Height)
   {
@@ -58,7 +59,8 @@ Label2->Caption = pkt_player2;
    Button1->Visible=true;
    Button2->Visible=true;
    kierunek=-1;
-   MediaPlayer2->Play();
+   PlaySound(MAKEINTRESOURCE(200), HInstance, SND_RESOURCE | SND_ASYNC);
+
  }
  else if( pilka->Top+pilka->Height>pal1->Top)
         {
@@ -134,7 +136,8 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
  Label4->Visible=false;
 Button1->Visible=false;
 Button2->Visible=false;
-MediaPlayer1->Play();
+//MediaPlayer1->Play();
+PlaySound(MAKEINTRESOURCE(100), HInstance, SND_RESOURCE | SND_ASYNC);
 }
 //---------------------------------------------------------------------------
 
@@ -160,26 +163,14 @@ Label1->Visible=false;
  Label4->Visible=false;
  Label2->Caption = pkt_player2;
   Label1->Caption = pkt_player1;
+  PlaySound(MAKEINTRESOURCE(100), HInstance, SND_RESOURCE | SND_ASYNC);
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::FormCreate(TObject *Sender)
 {
-             MediaPlayer1->FileName= "snd/during game.wav";
-             MediaPlayer2->FileName= "snd/skucha.wav";
-             MediaPlayer3->FileName= "snd/start.wav";
-             MediaPlayer1->Open();
-             MediaPlayer3->Open();
-             MediaPlayer2->Open();
-            MediaPlayer1->Play();
-            }
+PlaySound(MAKEINTRESOURCE(100), HInstance, SND_RESOURCE | SND_ASYNC);
+}
             //---------------------------------------------------------------------------
 
-void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
-{
-  MediaPlayer1->Close();
-  MediaPlayer3->Close();
-             MediaPlayer2->Close();
-}
-//---------------------------------------------------------------------------
 
